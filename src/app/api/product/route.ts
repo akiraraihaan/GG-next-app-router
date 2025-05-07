@@ -4,12 +4,14 @@ const data = [
   {
     id: 1,
     name: "sepatu super",
-    price: 200
+    price: 200,
+    image: "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/2fb6ff59-aca1-4f1f-a836-0888d4f119a6/W+NIKE+V2K+RUN.png"
   },
   {
     id: 2,
     name: "sepatu kureng",
-    price: 900
+    price: 900,
+    image: "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/a8ecc919-b1f0-40d6-8f1d-b040480424c9/W+NIKE+V2K+RUN.png"
   }
 ];
 
