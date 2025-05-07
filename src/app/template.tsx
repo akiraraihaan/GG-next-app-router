@@ -6,8 +6,8 @@ const Template = ( {children} : {children: React.ReactNode} ) => {
 
   return (
     <>
-      <h1>Template</h1>
       {children}
+      <h1 className="mt-[500px]">Template</h1>
       <div className="m-8 text-4xl">
         {varz} (template)
       </div>
