@@ -1,4 +1,5 @@
 import { NextResponse, NextRequest } from "next/server";
+import { retrieveDataById, retrieveData } from "@/lib/firebase/service";
 
 const data = [
   {
@@ -26,12 +27,14 @@ export async function GET (request: NextRequest) {
   const id = searchParams.get("id");
 
   if (id) {
-    const detailProduct = data.find((item) => item.id === Number(id));
+    const detailProduct = await retrieveDataById("products", id);
     if (!detailProduct) {
       return NextResponse.json ({ status: 404, message: "Not Found" });
     }
     return NextResponse.json ({ status: 200, message: "Success", data: detailProduct });
   }
+
+  const products = await retrieveData("products");
   
-  return NextResponse.json ({ status: 200, message: "Success", data });
+  return NextResponse.json ({ status: 200, message: "Success", data: products });
 }
